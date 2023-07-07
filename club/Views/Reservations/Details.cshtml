@@ -1,0 +1,48 @@
+﻿@model club.Models.Reservation
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Reservation</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.date)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.date)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.timeDeb)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.timeDeb)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.timeFin)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.timeFin)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.reservedBy)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.reservedBy)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.clubName)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.clubName)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" class="btn btn-info" asp-route-id="@Model?.Id">Edit</a> |
+    <a asp-action="Index" class="btn btn-danger">Back to List</a>
+</div>
